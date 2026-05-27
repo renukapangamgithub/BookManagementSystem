@@ -12,7 +12,7 @@ const app = express();
 
 const allowedOrigins = [
   process.env.CLIENT_URL,
-  "http://localhost:5173"
+  "https://bookmanagementsystem-frontend-dk41.onrender.com"
 ];
 
 app.use(cors({
