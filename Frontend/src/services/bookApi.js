@@ -1,13 +1,10 @@
 import axios from "axios";
-import { serverURL } from "../App";
+import { serverURL } from "../config";  // ✅ IMPORTANT
 
 const API = `${serverURL}/api/books`;
 
 export const fetchBooks = async (page = 1) => {
-  const res = await axios.get(
-    `${API}?page=${page}&limit=6`
-  );
-
+  const res = await axios.get(`${API}?page=${page}&limit=3`);
   return res.data;
 };
 
